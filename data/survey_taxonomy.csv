@@ -1,0 +1,20 @@
+category,surveys
+System Architecture,5
+Perception: 3D Detection,4
+Perception: Semantic,3
+Perception: Sensor Fusion,2
+Prediction: Trajectories,4
+Prediction: Behavior,2
+Learning: Deep Networks,4
+Learning: End-to-End,2
+Learning: Reinforcement,3
+Learning: Imitation,2
+Data: Benchmarks,1
+Data: Synthetic & Sim,3
+Planning & Control,1
+Infrastructure: V2X,3
+Infrastructure: Cooperative,2
+Safety & Verification,5
+Safety: SOTIF & Robustness,3
+Localization,1
+Governance,2

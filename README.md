@@ -25,6 +25,7 @@ Browse the reference list and plots as a site: https://utathyaworks.github.io/Au
 | [`data_landscape`](figures/data_landscape.png) | 38 benchmark datasets by release year and annotated size; South Asian and African datasets ringed |
 | [`maturity_heatmap`](figures/maturity_heatmap.png) | All 38 method families (12 Sense, 14 Plan, 12 Act) graded M1 to M4 at on-road entropy E1 to E5; the share fielded or proven falls from 57-58% at E3 to 0-25% at E4 |
 | [`sae_ladder`](figures/sae_ladder.png) | Who performs control, monitoring and fallback at each SAE level, with commercial status |
+| [`intro_burden`](figures/intro_burden.png) | How the survey's taxonomy categories are distributed (from `data/survey_taxonomy.csv`) |
 | [`quant_results`](figures/quant_results.png) | Headline results quoted in the metrics section: camera against LiDAR detection, one tracker under three metrics, Waymo crash-rate reductions with intervals |
 
 ![Road network structure](figures/data_roads.png)
