@@ -33,8 +33,8 @@ def fig_heat():
             for j, e in enumerate(E):
                 g = x[e]
                 ax.add_patch(plt.Rectangle((j, -i), 0.94, 0.86, color=FILL[g], lw=0))
-                ax.text(j + 0.47, -i + 0.43, g, ha="center", va="center", fontsize=6, color=TEXT[g], fontweight="bold")
-            ax.text(-0.12, -i + 0.43, x["family"], ha="right", va="center", fontsize=6.2, color=INK)
+                ax.text(j + 0.47, -i + 0.43, g, ha="center", va="center", fontsize=6.5, color=TEXT[g], fontweight="bold")
+            ax.text(-0.12, -i + 0.43, x["family"], ha="right", va="center", fontsize=6.5, color=INK)
         ax.set_xlim(0, 5); ax.set_ylim(-len(r) + 0.95, 1.0); ax.axis("off")
         # the cliff: bracket between E3 and E4
         ax.plot([3 - 0.03] * 2, [-len(r) + 0.95, 0.9], color=OURS, lw=0.7, ls=(0, (3, 2)))
@@ -43,7 +43,7 @@ def fig_heat():
         ax.text(0, 1.02, s, transform=ax.transAxes, fontsize=8, fontweight="bold", color=LIT_DEEP, ha="right", va="bottom", clip_on=False) if False else None
         ax.text(-0.02, 1.0, s, transform=ax.transAxes, fontsize=8, fontweight="bold", color=LIT_DEEP, ha="right", va="bottom")
         pct = ", ".join(f"{e} {share(s, e):.0f}%" for e in ("E3", "E4"))
-        ax.text(1.0, 1.0, f"fielded or proven (M1+M2): {pct}", transform=ax.transAxes, fontsize=6.2, color=MUTED, ha="right", va="bottom")
+        ax.text(1.0, 1.0, f"fielded or proven (M1+M2): {pct}", transform=ax.transAxes, fontsize=6.5, color=MUTED, ha="right", va="bottom")
         if k == 0:
             for j, e in enumerate(E):
                 ax.text(j + 0.47, 1.9, e, ha="center", va="bottom", fontsize=7, fontweight="bold", color=INK) if False else None
@@ -57,7 +57,7 @@ def fig_heat():
     for q, (g, t) in enumerate(labs):
         x = lx + q * 0.245
         fig.patches.append(plt.Rectangle((x, 0.072), 0.022, 0.012, transform=fig.transFigure, color=FILL[g], lw=0))
-        fig.text(x + 0.028, 0.078, f"{g} {t}", fontsize=5.9, va="center", color=INK)
+        fig.text(x + 0.028, 0.078, f"{g} {t}", fontsize=6.5, va="center", color=INK)
     fig.text(0.015, 0.025, "Finding: in all three stages the share of families that are fielded or proven (M1+M2) falls from "
              f"{min(share(s, 'E3') for s in STAGES):.0f}–{max(share(s, 'E3') for s in STAGES):.0f}% at E3 to "
              f"{min(share(s, 'E4') for s in STAGES):.0f}–{max(share(s, 'E4') for s in STAGES):.0f}% at E4 (dashed line).".replace("% at E4", "%"+chr(10)+"at E4"),
