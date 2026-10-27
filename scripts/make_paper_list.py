@@ -52,4 +52,9 @@ for label, rows in sections.items():
         L.append(f"| {y} | {a} | {t.replace('|', '/')} | {v.replace('|', '/')} | " + (f"[link]({l})" if l else "") + " |")
     L.append("")
 open(os.path.join(root, "PAPERS.md"), "w", encoding="utf-8").write("\n".join(L))
+import json
+os.makedirs(os.path.join(root, "docs"), exist_ok=True)
+js = [{"g": label, "y": int(y) if y.isdigit() else None, "a": a, "t": t, "v": v, "l": l, "k": k}
+      for label, rows in sections.items() for y, a, t, v, l, k in rows]
+json.dump(js, open(os.path.join(root, "docs", "papers.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print(total, {k: len(v) for k, v in sections.items()})

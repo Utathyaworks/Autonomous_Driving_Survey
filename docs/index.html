@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Level-5 Autonomy Survey</title>
+<meta name="description" content="Reference list, plots and findings for a survey of global readiness for Level-5 vehicular autonomy.">
+<style>
+:root{--bg:#fafcff;--surface:#fff;--ink:#1c2634;--muted:#606c7c;--line:#c8d2e0;--blue:#2668b2;--deep:#153a68;--tint:#ebf3fc;
+--amber:#c47c00;--amberbg:#fef5e2;--amberink:#8a5400;--plan:#3e8e7e;--act:#7a5c9e;--gen:#8a94a3}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1620;--surface:#17212e;--ink:#e6ecf4;--muted:#9aa7b8;--line:#2b3a4d;--blue:#6fa8ee;--deep:#a9ccf6;--tint:#14263a;--amber:#e3a33a;--amberbg:#2b2210;--amberink:#f0c273;--plan:#5fb9a7;--act:#a98fd0;--gen:#8793a3}}
+:root[data-theme=dark]{--bg:#0f1620;--surface:#17212e;--ink:#e6ecf4;--muted:#9aa7b8;--line:#2b3a4d;--blue:#6fa8ee;--deep:#a9ccf6;--tint:#14263a;--amber:#e3a33a;--amberbg:#2b2210;--amberink:#f0c273;--plan:#5fb9a7;--act:#a98fd0;--gen:#8793a3}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif}
+a{color:var(--blue)}
+header{padding:28px 20px 8px;max-width:1120px;margin:auto}
+h1{font-size:clamp(22px,3.4vw,32px);line-height:1.2;margin:0 0 6px;color:var(--deep)}
+.sub{color:var(--muted);margin:0 0 14px;max-width:760px}
+.finding{background:var(--amberbg);border-left:4px solid var(--amber);color:var(--amberink);padding:10px 14px;border-radius:4px;font-weight:600;max-width:900px}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .in{max-width:1120px;margin:auto;padding:8px 20px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.tab{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:6px 14px;border-radius:999px;cursor:pointer;font:inherit}
+.tab[aria-selected=true]{background:var(--blue);border-color:var(--blue);color:#fff}
+.spacer{flex:1}
+main{max-width:1120px;margin:auto;padding:16px 20px 60px}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+input[type=search]{flex:1;min-width:220px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:4px 11px;border-radius:999px;cursor:pointer;font:inherit;font-size:13px}
+.chip[aria-pressed=true]{border-color:var(--blue);background:var(--tint);color:var(--deep);font-weight:600}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:baseline}
+.count{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top;font-size:14px}
+th{background:var(--tint);color:var(--deep);cursor:pointer;white-space:nowrap;position:sticky;top:46px}
+td.y{white-space:nowrap;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;border-top:3px solid var(--gen)}
+.card h3{font-size:14.5px;margin:0 0 6px;line-height:1.35}
+.card .m{color:var(--muted);font-size:13px}
+.bars{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px}
+.bars svg{width:100%;height:auto;display:block}
+.hint{color:var(--muted);font-size:13px;margin:8px 0 0}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:16px}
+.fig img{width:100%;height:auto;display:block;border-radius:4px;background:#fff}
+.fig h3{margin:0 0 4px;font-size:16px;color:var(--deep)}
+.fig p{margin:0 0 10px;color:var(--muted)}
+.legend span{margin-right:14px;font-size:13px}
+footer{max-width:1120px;margin:auto;padding:0 20px 40px;color:var(--muted);font-size:13px}
+@media (max-width:640px){th:nth-child(4),td:nth-child(4){display:none}}
+</style>
+</head>
+<body>
+<header>
+<h1>Building towards Level-5 Vehicular Autonomy</h1>
+<p class="sub">A survey of global readiness in data, technology and society. This page holds the survey's reference list and the plots built from its data. Blue marks other people's published work, amber marks our own analysis.</p>
+<div class="finding">India carries about 420 million road users a day on about 15 annotated frames per 1,000 road-km. Japan and Brazil have no public annotated benchmark of record.</div>
+</header>
+<nav><div class="in" role="tablist">
+<button class="tab" role="tab" data-v="table" aria-selected="true">Table</button>
+<button class="tab" role="tab" data-v="cards" aria-selected="false">Cards</button>
+<button class="tab" role="tab" data-v="timeline" aria-selected="false">Timeline</button>
+<button class="tab" role="tab" data-v="figures" aria-selected="false">Plots</button>
+<span class="spacer"></span>
+<button class="chip" id="theme" aria-pressed="false">Dark</button>
+</div></nav>
+<main id="main"></main>
+<footer>Reference list generated from the survey's BibTeX files; plots computed by scripts in the repository. <a href="https://github.com/Utathyaworks/Autonomous_Driving_Survey">Source on GitHub</a>.</footer>
+<script>
+const COL={General:"var(--gen)",Sense:"var(--blue)",Plan:"var(--plan)",Act:"var(--act)"};
+const GROUPS=["Sense","Plan","Act","General"];
+const NAME={"General and cross-cutting":"General",Sense:"Sense",Plan:"Plan",Act:"Act"};
+let CNT="",P=[],view="table",q="",gsel=new Set(),sort={k:"y",d:1},yr=null;
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function store(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+function load(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function filtered(){const t=q.toLowerCase();return P.filter(p=>(!gsel.size||gsel.has(p.g))&&(!yr||p.y===yr)&&(!t||(p.t+" "+p.a+" "+p.v+" "+(p.y||"")).toLowerCase().includes(t)))}
+function toolbar(){return `<div class="tools"><input type="search" id="q" placeholder="Search title, author, venue or year" value="${esc(q)}" aria-label="Search papers">
+${GROUPS.map(g=>`<button class="chip" data-g="${g}" aria-pressed="${gsel.has(g)}"><span class="dot" style="background:${COL[g]}"></span>${g}</button>`).join("")}
+${yr?`<button class="chip" id="clry" aria-pressed="true">Year ${yr} &times;</button>`:""}
+<span class="count" id="cnt"></span></div>`}
+function bind(){const qi=$("#q");if(qi)qi.oninput=e=>{q=e.target.value;draw(true)};
+document.querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{const g=b.dataset.g;gsel.has(g)?gsel.delete(g):gsel.add(g);draw()});
+const c=$("#clry");if(c)c.onclick=()=>{yr=null;draw()}}
+function link(p){return p.l?`<a href="${esc(p.l)}" target="_blank" rel="noopener">link</a>`:""}
+function table(){const r=filtered().sort((a,b)=>{const x=a[sort.k]??"",y=b[sort.k]??"";return (x>y?1:x<y?-1:0)*sort.d});
+CNT=r.length+" of "+P.length;
+return `<table><thead><tr>${[["y","Year"],["a","First author"],["t","Title"],["v","Venue"],["g","Group"]].map(([k,n])=>`<th data-s="${k}">${n}${sort.k===k?(sort.d>0?" ▲":" ▼"):""}</th>`).join("")}<th>Link</th></tr></thead><tbody>
+${r.map(p=>`<tr><td class="y">${p.y??""}</td><td>${esc(p.a)}</td><td>${esc(p.t)}</td><td>${esc(p.v)}</td><td><span class="dot" style="background:${COL[p.g]}"></span>${p.g}</td><td>${link(p)}</td></tr>`).join("")}</tbody></table>`}
+function cards(){const r=filtered().sort((a,b)=>(b.y||0)-(a.y||0));CNT=r.length+" of "+P.length;
+return `<div class="cards">${r.map(p=>`<div class="card" style="border-top-color:${COL[p.g]}"><h3>${esc(p.t)}</h3><div class="m">${esc(p.a)} &middot; ${p.y??""}</div><div class="m">${esc(p.v)}</div><div class="m"><span class="dot" style="background:${COL[p.g]}"></span>${p.g} ${p.l?"&middot; "+link(p):""}</div></div>`).join("")}</div>`}
+function timeline(){const r=filtered();CNT=r.length+" of "+P.length;
+const ys=r.map(p=>p.y).filter(Boolean);const y0=1950,y1=2026;const bins={};
+for(const p of r){if(!p.y)continue;const b=p.y<1990?"<1990":String(p.y);(bins[b]??={});bins[b][p.g]=(bins[b][p.g]||0)+1}
+const keys=["<1990"];for(let y=1990;y<=2026;y++)keys.push(String(y));
+const max=Math.max(1,...keys.map(k=>Object.values(bins[k]||{}).reduce((a,b)=>a+b,0)));
+const W=1000,H=300,L=34,B=28,bw=(W-L)/keys.length;let s="";
+for(let t=0;t<=max;t+=Math.max(1,Math.ceil(max/5))){const y=H-B-(t/max)*(H-B-10);s+=`<line x1="${L}" x2="${W}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-width=".6"/><text x="${L-5}" y="${y+4}" text-anchor="end" font-size="11" fill="var(--muted)">${t}</text>`}
+keys.forEach((k,i)=>{let y=H-B;const x=L+i*bw+2;for(const g of GROUPS){const n=(bins[k]||{})[g]||0;if(!n)continue;const h=n/max*(H-B-10);y-=h;s+=`<rect x="${x}" y="${y}" width="${bw-4}" height="${h}" fill="${COL[g]}" data-y="${k}" style="cursor:pointer"><title>${k}: ${n} ${g}</title></rect>`}
+if(i%4===0||k==="<1990")s+=`<text x="${x+bw/2-2}" y="${H-10}" text-anchor="middle" font-size="10.5" fill="var(--muted)">${k}</text>`});
+return `<div class="bars"><div class="legend">${GROUPS.map(g=>`<span><span class="dot" style="background:${COL[g]}"></span>${g}</span>`).join("")}</div><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Papers per year, stacked by group">${s}</svg>
+<p class="hint">Click a bar to list that year's papers.</p></div>`}
+const FIGS=[["data_inversion","Demand against annotation","Daily road users against annotated frames per 1,000 road-km. India: 420 M users, 15 frames; Japan and Brazil: none."],
+["maturity_heatmap","The maturity cliff","38 method families across Sense, Plan and Act, graded M1 to M4 at on-road entropy E1 to E5. The share fielded or proven falls from 57-58% at E3 to 0-25% at E4."],
+["sae_ladder","SAE levels","Who performs control, monitoring and fallback at each level, with commercial status."],
+["data_landscape","Benchmark landscape","38 datasets by release year and annotated size; South Asian and African datasets ringed."],
+["data_roads","Road networks","Total roads, expressways, paved share and urban speed for the ten largest economies."],
+["quant_results","Headline results","Camera against LiDAR detection, one tracker under three metrics, Waymo crash-rate reductions with intervals."]];
+function figures(){return FIGS.map(([f,t,d])=>`<div class="fig"><h3>${t}</h3><p>${d}</p><a href="figures/${f}.png"><img src="figures/${f}.png" alt="${t}" loading="lazy"></a></div>`).join("")}
+function draw(keepFocus){const m=$("#main");
+if(view==="figures"){m.innerHTML=figures();return}
+const body=(view==="table"?table():view==="cards"?cards():timeline());m.innerHTML=toolbar()+body;$("#cnt").textContent=CNT;bind();
+document.querySelectorAll("th[data-s]").forEach(h=>h.onclick=()=>{const k=h.dataset.s;sort={k,d:sort.k===k?-sort.d:1};draw()});
+document.querySelectorAll("rect[data-y]").forEach(r=>r.onclick=()=>{const k=r.dataset.y;if(k==="<1990")return;yr=+k;view="table";setTabs();draw()});
+if(keepFocus){const qi=$("#q");qi.focus();qi.setSelectionRange(q.length,q.length)}}
+function setTabs(){document.querySelectorAll(".tab").forEach(t=>t.setAttribute("aria-selected",t.dataset.v===view));store("view",view)}
+document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{view=t.dataset.v;setTabs();draw()});
+$("#theme").onclick=()=>{const d=document.documentElement,dark=d.dataset.theme==="dark"||(!d.dataset.theme&&matchMedia("(prefers-color-scheme:dark)").matches);d.dataset.theme=dark?"light":"dark";$("#theme").textContent=dark?"Dark":"Light";store("theme",d.dataset.theme)};
+const th=load("theme");if(th){document.documentElement.dataset.theme=th;$("#theme").textContent=th==="dark"?"Light":"Dark"}
+fetch("papers.json").then(r=>r.json()).then(d=>{P=d.map(p=>({...p,g:NAME[p.g]||p.g}));const v=load("view");if(["table","cards","timeline","figures"].includes(v))view=v;setTabs();draw()}).catch(()=>{$("#main").textContent="Could not load papers.json."});
+</script>
+</body>
+</html>

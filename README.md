@@ -14,6 +14,8 @@ Road users and annotated data are distributed in opposite ways. India carries ab
 
 *(a) Daily road users, summed over the urban, rural and expressway columns of the road-network table. (b) Dataset Coverage Ratio (DCR) = annotated frames per 1,000 road-km, log scale. Blue is published data, amber is our metric.*
 
+Browse the reference list and plots as a site: https://utathyaworks.github.io/Autonomous_Driving_Survey/ (table, cards, timeline and plots views).
+
 ## Plots
 
 | Plot | What it shows |
