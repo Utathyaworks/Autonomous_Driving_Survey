@@ -1,0 +1,770 @@
+% ============================================================================
+% References for Section 3.2.3 (ACT).
+%
+% Every entry below was checked against a primary record -- Crossref (the DOI
+% registry), DBLP, PMLR, the arXiv API, or the publisher's own page -- for
+% exact title, complete author list, venue, year and pagination before being
+% added. Fields that could not be confirmed against that record were omitted
+% rather than guessed.
+%
+% Loaded via \bibliography{references,refs-spa,refs-plan,refs-act} in main.tex.
+% ============================================================================
+
+% ---------------------------------------------------------------------------
+% Low-level vehicle control
+% ---------------------------------------------------------------------------
+
+@techreport{Coulter1992PurePursuit,
+  author      = {R. Craig Coulter},
+  title       = {Implementation of the Pure Pursuit Path Tracking Algorithm},
+  institution = {Robotics Institute, Carnegie Mellon University},
+  address     = {Pittsburgh, Pennsylvania},
+  number      = {CMU-RI-TR-92-01},
+  year        = {1992}
+}
+
+@article{Thrun2006Stanley,
+  author  = {Sebastian Thrun and Mike Montemerlo and Hendrik Dahlkamp and David Stavens
+             and Andrei Aron and James Diebel and Philip Fong and John Gale and Morgan Halpenny
+             and Gabriel Hoffmann and Kenny Lau and Celia Oakley and Mark Palatucci
+             and Vaughan Pratt and Pascal Stang and Sven Strohband and Cedric Dupont
+             and Lars-Erik Jendrossek and Christian Koelen and Charles Markey and Carlo Rummel
+             and Joe van Niekerk and Eric Jensen and Philippe Alessandrini and Gary Bradski
+             and Bob Davies and Scott Ettinger and Adrian Kaehler and Ara Nefian and Pamela Mahoney},
+  title   = {Stanley: The robot that won the {DARPA} Grand Challenge},
+  journal = {Journal of Field Robotics},
+  volume  = {23},
+  number  = {9},
+  pages   = {661--692},
+  year    = {2006},
+  doi     = {10.1002/rob.20147}
+}
+
+@inproceedings{Hoffmann2007Stanley,
+  author    = {Gabriel M. Hoffmann and Claire J. Tomlin and Michael Montemerlo and Sebastian Thrun},
+  title     = {Autonomous Automobile Trajectory Tracking for Off-Road Driving:
+               Controller Design, Experimental Validation and Racing},
+  booktitle = {American Control Conference (ACC)},
+  pages     = {2296--2301},
+  year      = {2007},
+  doi       = {10.1109/ACC.2007.4282788}
+}
+
+@inproceedings{Kong2015Models,
+  author    = {Jason Kong and Mark Pfeiffer and Georg Schildbach and Francesco Borrelli},
+  title     = {Kinematic and dynamic vehicle models for autonomous driving control design},
+  booktitle = {IEEE Intelligent Vehicles Symposium (IV)},
+  pages     = {1094--1099},
+  year      = {2015},
+  doi       = {10.1109/IVS.2015.7225830}
+}
+
+@inproceedings{Dominguez2016Lateral,
+  author    = {Salvador Dominguez and Alan Ali and Ga{\"e}tan Garcia and Philippe Martinet},
+  title     = {Comparison of lateral controllers for autonomous vehicle: Experimental results},
+  booktitle = {IEEE International Conference on Intelligent Transportation Systems (ITSC)},
+  pages     = {1418--1423},
+  year      = {2016},
+  doi       = {10.1109/ITSC.2016.7795743}
+}
+
+% ---------------------------------------------------------------------------
+% Model predictive control
+% ---------------------------------------------------------------------------
+
+@article{Qin2003MPCSurvey,
+  author  = {S. Joe Qin and Thomas A. Badgwell},
+  title   = {A survey of industrial model predictive control technology},
+  journal = {Control Engineering Practice},
+  volume  = {11},
+  number  = {7},
+  pages   = {733--764},
+  year    = {2003},
+  doi     = {10.1016/S0967-0661(02)00186-7}
+}
+
+@article{Mayne2000MPC,
+  author  = {D. Q. Mayne and J. B. Rawlings and C. V. Rao and P. O. M. Scokaert},
+  title   = {Constrained model predictive control: Stability and optimality},
+  journal = {Automatica},
+  volume  = {36},
+  number  = {6},
+  pages   = {789--814},
+  year    = {2000},
+  doi     = {10.1016/S0005-1098(99)00214-9}
+}
+
+@article{Borrelli2005MPC,
+  author  = {Francesco Borrelli and Paolo Falcone and Tam{\'a}s Keviczky and Jahan Asgari and Davor Hrovat},
+  title   = {{MPC}-based approach to active steering for autonomous vehicle systems},
+  journal = {International Journal of Vehicle Autonomous Systems},
+  volume  = {3},
+  number  = {2/3/4},
+  pages   = {265},
+  year    = {2005},
+  doi     = {10.1504/IJVAS.2005.008237},
+  annote    = {The Crossref record registers only the first page; the final page is not stated there
+             and has therefore been omitted.}
+}
+
+@article{Mayne2005Tube,
+  author  = {D. Q. Mayne and M. M. Seron and S. V. Rakovi{\'c}},
+  title   = {Robust model predictive control of constrained linear systems with bounded disturbances},
+  journal = {Automatica},
+  volume  = {41},
+  number  = {2},
+  pages   = {219--224},
+  year    = {2005},
+  doi     = {10.1016/j.automatica.2004.08.019}
+}
+
+@article{Diehl2005RTI,
+  author  = {Moritz Diehl and Hans Georg Bock and Johannes P. Schl{\"o}der},
+  title   = {A Real-Time Iteration Scheme for Nonlinear Optimization in Optimal Feedback Control},
+  journal = {SIAM Journal on Control and Optimization},
+  volume  = {43},
+  number  = {5},
+  pages   = {1714--1736},
+  year    = {2005},
+  doi     = {10.1137/S0363012902400713}
+}
+
+@article{Ferreau2014qpOASES,
+  author  = {Hans Joachim Ferreau and Christian Kirches and Andreas Potschka and Hans Georg Bock and Moritz Diehl},
+  title   = {{qpOASES}: a parametric active-set algorithm for quadratic programming},
+  journal = {Mathematical Programming Computation},
+  volume  = {6},
+  number  = {4},
+  pages   = {327--363},
+  year    = {2014},
+  doi     = {10.1007/s12532-014-0071-1}
+}
+
+@article{Andersson2019CasADi,
+  author  = {Joel A. E. Andersson and Joris Gillis and Greg Horn and James B. Rawlings and Moritz Diehl},
+  title   = {{CasADi}: a software framework for nonlinear optimization and optimal control},
+  journal = {Mathematical Programming Computation},
+  volume  = {11},
+  number  = {1},
+  pages   = {1--36},
+  year    = {2019},
+  doi     = {10.1007/s12532-018-0139-4}
+}
+
+@article{Stellato2020OSQP,
+  author  = {Bartolomeo Stellato and Goran Banjac and Paul Goulart and Alberto Bemporad and Stephen Boyd},
+  title   = {{OSQP}: an operator splitting solver for quadratic programs},
+  journal = {Mathematical Programming Computation},
+  volume  = {12},
+  number  = {4},
+  pages   = {637--672},
+  year    = {2020},
+  doi     = {10.1007/s12532-020-00179-2}
+}
+
+@article{Verschueren2022acados,
+  author  = {Robin Verschueren and Gianluca Frison and Dimitris Kouzoupis and Jonathan Frey
+             and Niels van Duijkeren and Andrea Zanelli and Branimir Novoselnik and Thivaharan Albin
+             and Rien Quirynen and Moritz Diehl},
+  title   = {{acados} -- a modular open-source framework for fast embedded optimal control},
+  journal = {Mathematical Programming Computation},
+  volume  = {14},
+  number  = {1},
+  pages   = {147--183},
+  year    = {2022},
+  doi     = {10.1007/s12532-021-00208-8}
+}
+
+@article{Hewing2020LBMPC,
+  author  = {Lukas Hewing and Kim P. Wabersich and Marcel Menner and Melanie N. Zeilinger},
+  title   = {Learning-Based Model Predictive Control: Toward Safe Learning in Control},
+  journal = {Annual Review of Control, Robotics, and Autonomous Systems},
+  volume  = {3},
+  number  = {1},
+  pages   = {269--296},
+  year    = {2020},
+  doi     = {10.1146/annurev-control-090419-075625}
+}
+
+@article{Kabzan2019LBMPC,
+  author  = {Juraj Kabzan and Lukas Hewing and Alexander Liniger and Melanie N. Zeilinger},
+  title   = {Learning-Based Model Predictive Control for Autonomous Racing},
+  journal = {IEEE Robotics and Automation Letters},
+  volume  = {4},
+  number  = {4},
+  pages   = {3363--3370},
+  year    = {2019},
+  doi     = {10.1109/LRA.2019.2926677}
+}
+
+@inproceedings{Amos2018DiffMPC,
+  author    = {Brandon Amos and Ivan Dario Jimenez Rodriguez and Jacob Sacks and Byron Boots and J. Zico Kolter},
+  title     = {Differentiable {MPC} for End-to-end Planning and Control},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  pages     = {8299--8310},
+  year      = {2018}
+}
+
+@article{Ames2017CBF,
+  author  = {Aaron D. Ames and Xiangru Xu and Jessy W. Grizzle and Paulo Tabuada},
+  title   = {Control Barrier Function Based Quadratic Programs for Safety Critical Systems},
+  journal = {IEEE Transactions on Automatic Control},
+  volume  = {62},
+  number  = {8},
+  pages   = {3861--3876},
+  year    = {2017},
+  doi     = {10.1109/TAC.2016.2638961}
+}
+
+@article{Wabersich2021SafetyFilter,
+  author  = {Kim P. Wabersich and Melanie N. Zeilinger},
+  title   = {A predictive safety filter for learning-based control of constrained nonlinear dynamical systems},
+  journal = {Automatica},
+  volume  = {129},
+  pages   = {109597},
+  year    = {2021},
+  doi     = {10.1016/j.automatica.2021.109597}
+}
+
+% ---------------------------------------------------------------------------
+% Drive-by-wire and the actuation layer
+% ---------------------------------------------------------------------------
+
+@article{Yih2005SteerByWire,
+  author  = {Paul Yih and J. Christian Gerdes},
+  title   = {Modification of vehicle handling characteristics via steer-by-wire},
+  journal = {IEEE Transactions on Control Systems Technology},
+  volume  = {13},
+  number  = {6},
+  pages   = {965--976},
+  year    = {2005},
+  doi     = {10.1109/TCST.2005.854320}
+}
+
+@misc{UNECE2018R79,
+  author       = {{United Nations Economic Commission for Europe}},
+  title        = {{UN} Regulation No.~79: Uniform provisions concerning the approval of
+                  vehicles with regard to steering equipment},
+  year         = {2018},
+  howpublished = {UNECE, Geneva. Revision~4 and later revisions; the requirement for a
+                  positive mechanical connection between the steering control and the road
+                  wheels was relaxed to permit electronically transmitted steering},
+  url          = {https://unece.org/transport/vehicle-regulations-wp29/standards/addendum-un-regulations-21-140}
+}
+
+@misc{AUTOSAR2023Adaptive,
+  author       = {{AUTOSAR}},
+  title        = {{AUTOSAR} Adaptive Platform: Explanation of Adaptive Platform Design},
+  year         = {2023},
+  howpublished = {AUTOSAR Consortium specification},
+  url          = {https://www.autosar.org/standards/adaptive-platform}
+}
+
+% ---------------------------------------------------------------------------
+% Fail-operational architecture and functional safety
+% ---------------------------------------------------------------------------
+
+@article{Sha2001Simplex,
+  author  = {Lui Sha},
+  title   = {Using simplicity to control complexity},
+  journal = {IEEE Software},
+  volume  = {18},
+  number  = {4},
+  pages   = {20--28},
+  year    = {2001},
+  doi     = {10.1109/MS.2001.936213}
+}
+
+@inproceedings{Kohn2015FailOperational,
+  author    = {Andr{\'e} Kohn and Michael Kasmeyer and Rolf Schneider and Andre Roger
+               and Claus Stellwag and Andreas Herkersdorf},
+  title     = {Fail-operational in safety-related automotive multi-core systems},
+  booktitle = {IEEE International Symposium on Industrial Embedded Systems (SIES)},
+  year      = {2015},
+  doi       = {10.1109/SIES.2015.7185051},
+  annote      = {Second author's surname is rendered ``Kasmeyer'' by dblp and Semantic Scholar
+               and ``Kabmeyer'' by Crossref; the two agreeing records are followed here.
+               Pagination is inconsistent between records (1--4 vs.\ 144--147) and is omitted.}
+}
+
+@misc{UL2023Standard4600,
+  author       = {{UL Standards \& Engagement}},
+  title        = {{ANSI/UL} 4600: Standard for Evaluation of Autonomous Products},
+  year         = {2023},
+  howpublished = {Third edition, published 17 March 2023},
+  url          = {https://www.shopulstandards.com/ProductDetail.aspx?UniqueKey=36027}
+}
+
+% ---------------------------------------------------------------------------
+% Reinforcement learning: formulation and core algorithms
+% ---------------------------------------------------------------------------
+
+@article{Mnih2015DQN,
+  author  = {Volodymyr Mnih and Koray Kavukcuoglu and David Silver and Andrei A. Rusu
+             and Joel Veness and Marc G. Bellemare and Alex Graves and Martin Riedmiller
+             and Andreas K. Fidjeland and Georg Ostrovski and Stig Petersen and Charles Beattie
+             and Amir Sadik and Ioannis Antonoglou and Helen King and Dharshan Kumaran
+             and Daan Wierstra and Shane Legg and Demis Hassabis},
+  title   = {Human-level control through deep reinforcement learning},
+  journal = {Nature},
+  volume  = {518},
+  number  = {7540},
+  pages   = {529--533},
+  year    = {2015},
+  doi     = {10.1038/nature14236}
+}
+
+@inproceedings{Silver2014DPG,
+  author    = {David Silver and Guy Lever and Nicolas Heess and Thomas Degris and Daan Wierstra and Martin Riedmiller},
+  title     = {Deterministic Policy Gradient Algorithms},
+  booktitle = {Proceedings of the 31st International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {32},
+  pages     = {387--395},
+  year      = {2014}
+}
+
+@inproceedings{Lillicrap2016DDPG,
+  author    = {Timothy P. Lillicrap and Jonathan J. Hunt and Alexander Pritzel and Nicolas Heess
+               and Tom Erez and Yuval Tassa and David Silver and Daan Wierstra},
+  title     = {Continuous control with deep reinforcement learning},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2016}
+}
+
+@inproceedings{Fujimoto2018TD3,
+  author    = {Scott Fujimoto and Herke van Hoof and David Meger},
+  title     = {Addressing Function Approximation Error in Actor-Critic Methods},
+  booktitle = {Proceedings of the 35th International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {80},
+  pages     = {1587--1596},
+  year      = {2018}
+}
+
+@inproceedings{Schulman2015TRPO,
+  author    = {John Schulman and Sergey Levine and Pieter Abbeel and Michael Jordan and Philipp Moritz},
+  title     = {Trust Region Policy Optimization},
+  booktitle = {Proceedings of the 32nd International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {37},
+  pages     = {1889--1897},
+  year      = {2015}
+}
+
+@misc{Schulman2017PPO,
+  author       = {John Schulman and Filip Wolski and Prafulla Dhariwal and Alec Radford and Oleg Klimov},
+  title        = {Proximal Policy Optimization Algorithms},
+  year         = {2017},
+  howpublished = {arXiv:1707.06347},
+  doi          = {10.48550/arXiv.1707.06347}
+}
+
+@inproceedings{Haarnoja2018SAC,
+  author    = {Tuomas Haarnoja and Aurick Zhou and Pieter Abbeel and Sergey Levine},
+  title     = {Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor},
+  booktitle = {Proceedings of the 35th International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {80},
+  pages     = {1861--1870},
+  year      = {2018}
+}
+
+@inproceedings{Hafner2020Dreamer,
+  author    = {Danijar Hafner and Timothy Lillicrap and Jimmy Ba and Mohammad Norouzi},
+  title     = {Dream to Control: Learning Behaviors by Latent Imagination},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2020}
+}
+
+@article{Hafner2025DreamerV3,
+  author  = {Danijar Hafner and Jurgis Pasukonis and Jimmy Ba and Timothy Lillicrap},
+  title   = {Mastering diverse control tasks through world models},
+  journal = {Nature},
+  volume  = {640},
+  number  = {8059},
+  pages   = {647--653},
+  year    = {2025},
+  doi     = {10.1038/s41586-025-08744-2}
+}
+
+% ---------------------------------------------------------------------------
+% Imitation, inverse reinforcement learning and offline reinforcement learning
+% ---------------------------------------------------------------------------
+
+@inproceedings{Ho2016GAIL,
+  author    = {Jonathan Ho and Stefano Ermon},
+  title     = {Generative Adversarial Imitation Learning},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  pages     = {4565--4573},
+  year      = {2016}
+}
+
+@inproceedings{Codevilla2018CIL,
+  author    = {Felipe Codevilla and Matthias M{\"u}ller and Antonio L{\'o}pez and Vladlen Koltun and Alexey Dosovitskiy},
+  title     = {End-to-End Driving Via Conditional Imitation Learning},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {4693--4700},
+  year      = {2018},
+  doi       = {10.1109/ICRA.2018.8460487}
+}
+
+@inproceedings{Chen2019LBC,
+  author    = {Dian Chen and Brady Zhou and Vladlen Koltun and Philipp Kr{\"a}henb{\"u}hl},
+  title     = {Learning by Cheating},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  pages     = {66--75},
+  year      = {2019}
+}
+
+@inproceedings{Ziebart2008MaxEntIRL,
+  author    = {Brian D. Ziebart and Andrew L. Maas and J. Andrew Bagnell and Anind K. Dey},
+  title     = {Maximum Entropy Inverse Reinforcement Learning},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  pages     = {1433--1438},
+  year      = {2008}
+}
+
+@inproceedings{Fujimoto2019BCQ,
+  author    = {Scott Fujimoto and David Meger and Doina Precup},
+  title     = {Off-Policy Deep Reinforcement Learning without Exploration},
+  booktitle = {Proceedings of the 36th International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {97},
+  pages     = {2052--2062},
+  year      = {2019}
+}
+
+@inproceedings{Kumar2020CQL,
+  author    = {Aviral Kumar and Aurick Zhou and George Tucker and Sergey Levine},
+  title     = {Conservative {Q}-Learning for Offline Reinforcement Learning},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2020}
+}
+
+@inproceedings{Kostrikov2022IQL,
+  author    = {Ilya Kostrikov and Ashvin Nair and Sergey Levine},
+  title     = {Offline Reinforcement Learning with Implicit {Q}-Learning},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022}
+}
+
+@misc{Levine2020OfflineRL,
+  author       = {Sergey Levine and Aviral Kumar and George Tucker and Justin Fu},
+  title        = {Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems},
+  year         = {2020},
+  howpublished = {arXiv:2005.01643},
+  doi          = {10.48550/arXiv.2005.01643}
+}
+
+% ---------------------------------------------------------------------------
+% Safe reinforcement learning
+% ---------------------------------------------------------------------------
+
+@article{Garcia2015SafeRL,
+  author  = {Javier Garc{\'i}a and Fernando Fern{\'a}ndez},
+  title   = {A Comprehensive Survey on Safe Reinforcement Learning},
+  journal = {Journal of Machine Learning Research},
+  volume  = {16},
+  number  = {42},
+  pages   = {1437--1480},
+  year    = {2015}
+}
+
+@inproceedings{Achiam2017CPO,
+  author    = {Joshua Achiam and David Held and Aviv Tamar and Pieter Abbeel},
+  title     = {Constrained Policy Optimization},
+  booktitle = {Proceedings of the 34th International Conference on Machine Learning (ICML)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {70},
+  pages     = {22--31},
+  year      = {2017}
+}
+
+@inproceedings{Alshiekh2018Shielding,
+  author    = {Mohammed Alshiekh and Roderick Bloem and R{\"u}diger Ehlers and Bettina K{\"o}nighofer
+               and Scott Niekum and Ufuk Topcu},
+  title     = {Safe Reinforcement Learning via Shielding},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  pages     = {2669--2678},
+  year      = {2018}
+}
+
+@inproceedings{Cheng2019SafeRLCBF,
+  author    = {Richard Cheng and G{\'a}bor Orosz and Richard M. Murray and Joel W. Burdick},
+  title     = {End-to-End Safe Reinforcement Learning through Barrier Functions for
+               Safety-Critical Continuous Control Tasks},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  pages     = {3387--3395},
+  year      = {2019}
+}
+
+@misc{ShalevShwartz2016SafeMARL,
+  author       = {Shai Shalev-Shwartz and Shaked Shammah and Amnon Shashua},
+  title        = {Safe, Multi-Agent, Reinforcement Learning for Autonomous Driving},
+  year         = {2016},
+  howpublished = {arXiv:1610.03295},
+  doi          = {10.48550/arXiv.1610.03295}
+}
+
+% ---------------------------------------------------------------------------
+% Simulation, sim-to-real and reinforcement-learning benchmarks for driving
+% ---------------------------------------------------------------------------
+
+@inproceedings{Tobin2017DomainRand,
+  author    = {Josh Tobin and Rachel Fong and Alex Ray and Jonas Schneider and Wojciech Zaremba and Pieter Abbeel},
+  title     = {Domain randomization for transferring deep neural networks from simulation to the real world},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {23--30},
+  year      = {2017},
+  doi       = {10.1109/IROS.2017.8202133}
+}
+
+@inproceedings{Suo2021TrafficSim,
+  author    = {Simon Suo and Sebastian Regalado and Sergio Casas and Raquel Urtasun},
+  title     = {{TrafficSim}: Learning to Simulate Realistic Multi-Agent Behaviors},
+  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {10395--10404},
+  year      = {2021},
+  doi       = {10.1109/CVPR46437.2021.01026}
+}
+
+@inproceedings{Wang2022VISTA,
+  author    = {Tsun-Hsuan Wang and Alexander Amini and Wilko Schwarting and Igor Gilitschenski
+               and Sertac Karaman and Daniela Rus},
+  title     = {Learning Interactive Driving Policies via Data-driven Simulation},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {7745--7752},
+  year      = {2022},
+  doi       = {10.1109/ICRA46639.2022.9812407}
+}
+
+@article{Li2023MetaDrive,
+  author  = {Quanyi Li and Zhenghao Peng and Lan Feng and Qihang Zhang and Zhenghai Xue and Bolei Zhou},
+  title   = {{MetaDrive}: Composing Diverse Driving Scenarios for Generalizable Reinforcement Learning},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  volume  = {45},
+  number  = {3},
+  pages   = {3461--3475},
+  year    = {2023},
+  doi     = {10.1109/TPAMI.2022.3190471}
+}
+
+@misc{Zhou2020SMARTS,
+  author       = {Ming Zhou and Jun Luo and Julian Villella and Yaodong Yang and David Rusu and Jiayu Miao
+                  and Weinan Zhang and Montgomery Alban and Iman Fadakar and Zheng Chen and Aurora Chongxi Huang
+                  and Ying Wen and Kimia Hassanzadeh and Daniel Graves and Dong Chen and Zhengbang Zhu
+                  and Nhat M. Nguyen and Mohamed Elsayed and Kun Shao and Sanjeevan Ahilan and Baokuan Zhang
+                  and Jiannan Wu and Zhengang Fu and Kasra Rezaee and Peyman Yadmellat and Mohsen Rohani
+                  and Nicolas Perez Nieves and Yihan Ni and Seyedershad Banijamali and Alexander Cowen-Rivers
+                  and Zheng Tian and Daniel Palenicek and Haitham Bou-Ammar and Hongbo Zhang and Wulong Liu
+                  and Jianye Hao and Jun Wang},
+  title        = {{SMARTS}: Scalable Multi-Agent Reinforcement Learning Training School for Autonomous Driving},
+  year         = {2020},
+  howpublished = {arXiv:2010.09776},
+  doi          = {10.48550/arXiv.2010.09776}
+}
+
+@inproceedings{Gulino2023Waymax,
+  author    = {Cole Gulino and Justin Fu and Wenjie Luo and George Tucker and Eli Bronstein and Yiren Lu
+               and Jean Harb and Xinlei Pan and Yan Wang and Xiangyu Chen and John D. Co-Reyes
+               and Rishabh Agarwal and Rebecca Roelofs and Yao Lu and Nico Montali and Paul Mougin
+               and Zoey Yang and Brandyn White and Aleksandra Faust and Rowan McAllister
+               and Dragomir Anguelov and Benjamin Sapp},
+  title     = {{Waymax}: An Accelerated, Data-Driven Simulator for Large-Scale Autonomous Driving Research},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS), Datasets and Benchmarks Track},
+  year      = {2023}
+}
+
+@inproceedings{Lowe2017MADDPG,
+  author    = {Ryan Lowe and Yi Wu and Aviv Tamar and Jean Harb and Pieter Abbeel and Igor Mordatch},
+  title     = {Multi-Agent Actor-Critic for Mixed Cooperative-Competitive Environments},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  pages     = {6379--6390},
+  year      = {2017}
+}
+
+@inproceedings{Kendall2019DriveInADay,
+  author    = {Alex Kendall and Jeffrey Hawke and David Janz and Przemys{\l}aw Mazur and Daniele Reda
+               and John-Mark Allen and Vinh-Dieu Lam and Alex Bewley and Amar Shah},
+  title     = {Learning to Drive in a Day},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {8248--8254},
+  year      = {2019},
+  doi       = {10.1109/ICRA.2019.8793742}
+}
+
+@inproceedings{Hu2022MILE,
+  author    = {Anthony Hu and Gianluca Corrado and Nicolas Griffiths and Zak Murez and Corina Gurau
+               and Hudson Yeo and Alex Kendall and Roberto Cipolla and Jamie Shotton},
+  title     = {Model-Based Imitation Learning for Urban Driving},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2022}
+}
+
+@misc{Lu2023ImitationNotEnough,
+  author       = {Yiren Lu and Justin Fu and George Tucker and Xinlei Pan and Eli Bronstein
+                  and Rebecca Roelofs and Benjamin Sapp and Brandyn White and Aleksandra Faust
+                  and Shimon Whiteson and Dragomir Anguelov and Sergey Levine},
+  title        = {Imitation Is Not Enough: Robustifying Imitation with Reinforcement Learning
+                  for Challenging Driving Scenarios},
+  year         = {2022},
+  howpublished = {arXiv:2212.11419},
+  doi          = {10.48550/arXiv.2212.11419}
+}
+
+@inproceedings{Sima2024DriveLM,
+  author    = {Chonghao Sima and Katrin Renz and Kashyap Chitta and Li Chen and Hanxue Zhang
+               and Chengen Xie and Jens Bei{\ss}wenger and Ping Luo and Andreas Geiger and Hongyang Li},
+  title     = {{DriveLM}: Driving with Graph Visual Question Answering},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  pages     = {256--274},
+  year      = {2024},
+  doi       = {10.1007/978-3-031-72943-0_15}
+}
+
+% ---------------------------------------------------------------------------
+% Runtime assurance, formal verification and security
+% ---------------------------------------------------------------------------
+
+@incollection{Bartocci2018RV,
+  author    = {Ezio Bartocci and Yli{\`e}s Falcone and Adrian Francalanza and Giles Reger},
+  title     = {Introduction to Runtime Verification},
+  booktitle = {Lectures on Runtime Verification},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {1--33},
+  year      = {2018},
+  publisher = {Springer},
+  doi       = {10.1007/978-3-319-75632-5_1}
+}
+
+@misc{Nister2019SFF,
+  author       = {David Nist{\'e}r and Hon-Leung Lee and Julia Ng and Yizhou Wang},
+  title        = {The Safety Force Field},
+  year         = {2019},
+  howpublished = {NVIDIA white paper},
+  url          = {https://www.nvidia.com/content/dam/en-zz/Solutions/self-driving-cars/safety-force-field/the-safety-force-field.pdf}
+}
+
+@article{Althoff2014OnlineVerification,
+  author  = {Matthias Althoff and John M. Dolan},
+  title   = {Online Verification of Automated Road Vehicles Using Reachability Analysis},
+  journal = {IEEE Transactions on Robotics},
+  volume  = {30},
+  number  = {4},
+  pages   = {903--918},
+  year    = {2014},
+  doi     = {10.1109/TRO.2014.2312453}
+}
+
+@article{Althoff2016SetBased,
+  author  = {Matthias Althoff and Silvia Magdici},
+  title   = {Set-Based Prediction of Traffic Participants on Arbitrary Road Networks},
+  journal = {IEEE Transactions on Intelligent Vehicles},
+  volume  = {1},
+  number  = {2},
+  pages   = {187--202},
+  year    = {2016},
+  doi     = {10.1109/TIV.2016.2622920}
+}
+
+@inproceedings{Pek2018InvariablySafe,
+  author    = {Christian Pek and Matthias Althoff},
+  title     = {Efficient Computation of Invariably Safe States for Motion Planning of Self-Driving Vehicles},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {3523--3530},
+  year      = {2018},
+  doi       = {10.1109/IROS.2018.8593597}
+}
+
+@inproceedings{Maierhofer2020TrafficRules,
+  author    = {Sebastian Maierhofer and Anna-Katharina Rettinger and Eva Charlotte Mayer and Matthias Althoff},
+  title     = {Formalization of Interstate Traffic Rules in Temporal Logic},
+  booktitle = {IEEE Intelligent Vehicles Symposium (IV)},
+  pages     = {752--759},
+  year      = {2020},
+  doi       = {10.1109/IV47402.2020.9304549}
+}
+
+@inproceedings{Censi2019Rulebooks,
+  author    = {Andrea Censi and Konstantin Slutsky and Tichakorn Wongpiromsarn and Dmitry Yershov
+               and Scott Pendleton and James Fu and Emilio Frazzoli},
+  title     = {Liability, Ethics, and Culture-Aware Behavior Specification using Rulebooks},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {8536--8542},
+  year      = {2019},
+  doi       = {10.1109/ICRA.2019.8794364}
+}
+
+@inproceedings{Fremont2019Scenic,
+  author    = {Daniel J. Fremont and Tommaso Dreossi and Shromona Ghosh and Xiangyu Yue
+               and Alberto L. Sangiovanni-Vincentelli and Sanjit A. Seshia},
+  title     = {{Scenic}: a language for scenario specification and scene generation},
+  booktitle = {ACM SIGPLAN Conference on Programming Language Design and Implementation (PLDI)},
+  pages     = {63--78},
+  year      = {2019},
+  doi       = {10.1145/3314221.3314633}
+}
+
+@inproceedings{Fremont2020FormalScenario,
+  author    = {Daniel J. Fremont and Edward Kim and Yash Vardhan Pant and Sanjit A. Seshia
+               and Atul Acharya and Xantha Bruso and Paul Wells and Steve Lemke and Qiang Lu and Shalin Mehta},
+  title     = {Formal Scenario-Based Testing of Autonomous Vehicles: From Simulation to the Real World},
+  booktitle = {IEEE International Conference on Intelligent Transportation Systems (ITSC)},
+  pages     = {1--8},
+  year      = {2020},
+  doi       = {10.1109/ITSC45102.2020.9294368}
+}
+
+@inproceedings{Eykholt2018RobustPhysical,
+  author    = {Kevin Eykholt and Ivan Evtimov and Earlence Fernandes and Bo Li and Amir Rahmati
+               and Chaowei Xiao and Atul Prakash and Tadayoshi Kohno and Dawn Song},
+  title     = {Robust Physical-World Attacks on Deep Learning Visual Classification},
+  booktitle = {IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  pages     = {1625--1634},
+  year      = {2018},
+  doi       = {10.1109/CVPR.2018.00175}
+}
+
+@inproceedings{Cao2019LiDARSpoofing,
+  author    = {Yulong Cao and Chaowei Xiao and Benjamin Cyr and Yimeng Zhou and Won Park
+               and Sara Rampazzi and Qi Alfred Chen and Kevin Fu and Z. Morley Mao},
+  title     = {Adversarial Sensor Attack on {LiDAR}-based Perception in Autonomous Driving},
+  booktitle = {ACM SIGSAC Conference on Computer and Communications Security (CCS)},
+  pages     = {2267--2281},
+  year      = {2019},
+  doi       = {10.1145/3319535.3339815}
+}
+
+@incollection{Shin2017Illusion,
+  author    = {Hocheol Shin and Dohyun Kim and Yujin Kwon and Yongdae Kim},
+  title     = {Illusion and Dazzle: Adversarial Optical Channel Exploits Against Lidars for
+               Automotive Applications},
+  booktitle = {Cryptographic Hardware and Embedded Systems (CHES)},
+  series    = {Lecture Notes in Computer Science},
+  pages     = {445--467},
+  year      = {2017},
+  publisher = {Springer},
+  doi       = {10.1007/978-3-319-66787-4_22}
+}
+
+@misc{UNECE2021R155,
+  author       = {{United Nations Economic Commission for Europe}},
+  title        = {{UN} Regulation No.~155: Uniform provisions concerning the approval of vehicles
+                  with regards to cyber security and cyber security management system},
+  year         = {2021},
+  howpublished = {UNECE, Geneva. Entered into force 22 January 2021},
+  url          = {https://unece.org/transport/documents/2021/03/standards/un-regulation-no-155-cyber-security-and-cyber-security}
+}
+
+@misc{UNECE2021R156,
+  author       = {{United Nations Economic Commission for Europe}},
+  title        = {{UN} Regulation No.~156: Uniform provisions concerning the approval of vehicles
+                  with regards to software update and software update management system},
+  year         = {2021},
+  howpublished = {UNECE, Geneva. Entered into force 22 January 2021},
+  url          = {https://unece.org/transport/documents/2021/03/standards/un-regulation-no-156-software-update-and-software-update}
+}
+
+%% Kaelbling1998POMDP, Paden2016Survey and Ross2011DAgger are defined in
+%% refs-plan.bib and were removed here to avoid duplicate BibTeX entries.
