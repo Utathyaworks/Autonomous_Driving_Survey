@@ -1,5 +1,4 @@
 category,focus,cite_keys
-Research Category,Research Focus and Key References,
 System Architecture,"End-to-end system design, modular pipelines, operational design domains, meta-level surveys.",Yurtsever2020;Pendleton2017;Maurer2016;Schwarting2018;SurveyOfSurveys2022
 Perception: 3D Detection,"Monocular methods, point-cloud processing, multi-sensor benchmark data, detection benchmarks.",Arnold2019;Mao2023;Geyer2020;Sun2020
 Perception: Semantic,"Pixel-level parsing, urban scene segmentation benchmarks, multi-task perception.",Janai2020;Cordts2016;Grigorescu2020

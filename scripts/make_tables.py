@@ -82,7 +82,7 @@ t = open(intro_tex, encoding="utf-8").read()
 m = re.search(r"\\label\{tab:survey_taxonomy\}(.*?)\\end\{tabularx\}", t, re.S)
 srows = []
 for line in m.group(1).split("\n"):
-    if line.strip().startswith("\\textbf{") and "&" in line:
+    if line.strip().startswith("\\textbf{") and "&" in line and "Research Category" not in line:
         a, b = line.split("&", 1)
         b = b.rstrip().rstrip("\\").rstrip()
         srows.append((clean(a), clean(re.sub(r"~?\\cite\{[^}]*\}", "", b)), ";".join(dict.fromkeys(cites(b)))))

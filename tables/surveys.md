@@ -1,10 +1,9 @@
 # Taxonomy of autonomous driving surveys (2016-2025)
 
-20 research categories, from Table 2 of the survey.
+19 research categories, from Table 2 of the survey.
 
 | Category | Focus | Surveys cited |
 |---|---|---|
-| Research Category | Research Focus and Key References |  |
 | System Architecture | End-to-end system design, modular pipelines, operational design domains, meta-level surveys. | [Yurtsever2020](https://doi.org/10.1109/ACCESS.2020.2983149), [Pendleton2017](https://doi.org/10.3390/machines5010006), Maurer2016, [Schwarting2018](https://doi.org/10.1146/annurev-control-060117-105157), [SurveyOfSurveys2022](https://doi.org/10.1109/TIV.2022.3223131) |
 | Perception: 3D Detection | Monocular methods, point-cloud processing, multi-sensor benchmark data, detection benchmarks. | [Arnold2019](https://doi.org/10.1109/TITS.2019.2892405), [Mao2023](https://doi.org/10.1007/s11263-023-01790-1), Geyer2020, Sun2020 |
 | Perception: Semantic | Pixel-level parsing, urban scene segmentation benchmarks, multi-task perception. | [Janai2020](https://doi.org/10.1561/0600000079), Cordts2016, [Grigorescu2020](https://doi.org/10.1002/rob.21918) |
