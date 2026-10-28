@@ -1,0 +1,21 @@
+category,focus,cite_keys
+Research Category,Research Focus and Key References,
+System Architecture,"End-to-end system design, modular pipelines, operational design domains, meta-level surveys.",Yurtsever2020;Pendleton2017;Maurer2016;Schwarting2018;SurveyOfSurveys2022
+Perception: 3D Detection,"Monocular methods, point-cloud processing, multi-sensor benchmark data, detection benchmarks.",Arnold2019;Mao2023;Geyer2020;Sun2020
+Perception: Semantic,"Pixel-level parsing, urban scene segmentation benchmarks, multi-task perception.",Janai2020;Cordts2016;Grigorescu2020
+Perception: Sensor Fusion,"LiDAR-camera-RADAR fusion, BEV representations, cross-modal attention.",MultiModalSensorFusion2022;MultiSensorFusionReview2025
+Prediction: Trajectories,"Physics-based models, deep learning approaches, multi-agent interactions, long-horizon uncertainty.",Mozaffari2020;Huang2022;Shi2024MotionSurvey;TrajPredictionSurvey2025
+Prediction: Behavior,"Intention inference, pedestrian behavior, goal estimation.",BehavioralIntentionPrediction2022;PedestrianIntentionPrediction2022
+Learning: Deep Networks,"CNN/RNN architectures, foundation models, vision-language models, end-to-end learning.",Grigorescu2020;Cui2024LLMDriving;Zhou2024VLMSurvey;EndToEndSurvey2023
+Learning: End-to-End,"Input-to-control mapping, interpretability and learned representations.",EndToEndSurvey2023;Tampuu2020
+Learning: Reinforcement,"Policy learning, reward design, sim-to-real transfer, sample efficiency.",ReinforcementLearningAV2020;DeepRLPathPlanning2024;RLBasedMotionPlanning2025
+Learning: Imitation,"Behavioral cloning, inverse RL, offline learning from demonstrations.",ImitationLearningSurvey2021;BehavioralCloningBeyond2024
+Data: Benchmarks,"Public datasets, annotation quality, diversity metrics, dataset bias, geographic distribution.",AVDatasetsStatistics2024
+\textbfData: Synthetic \,"Sim & CARLA simulators, domain randomization, on-demand generation, sim-to-real transfer.",SyntheticDatasetsAD2023;SimulationAutonomousDriving2023;TransferLearningVehiclePerception2023
+\textbfPlanning \,"Control & Route planning, behavior planning, trajectory optimization, steer-by-wire systems.",Schwarting2018
+Infrastructure: V2X,"V2V communication, V2I infrastructure, cooperative sensing.",V2XCooperativePerception2023;WhenAVMeetsV2X2024;AutonomousDrivingV2XEnvironment2022
+Infrastructure: Cooperative,"Platooning, coordinated maneuvers, collective perception.",CollaborativeAutonomousDriving2021;TowardAutonomousVehiclesCooperative2024
+\textbfSafety \,"Verification & Formal verification, hazard analysis, certification, scenario generation.",Koopman2017;VerificationValidationAutonomousSystems2024;SoftwareVerificationSafeAutonomousCars2021;TestingValidationVerification2023;ScenarioGenerationTesting2024
+\textbfSafety: SOTIF \,"Robustness & SOTIF assessment, adversarial robustness, failure modes.",SAFETYSOTIFChallenge2024;AdversarialRobustnessLiDAR2024;AdversarialAttacksDefenses2022
+Localization,"Online mapping, GPS-denied navigation, HD map alternatives, sensor-based methods.",SimultaneousLocalizationMapping2024
+Governance,"Legal frameworks and liability assignment, societal implications, labor displacement, deployment equity.",GoverningAutonomousVehicles2018;MachineLearningSocialLearning2017

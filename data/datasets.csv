@@ -1,0 +1,53 @@
+table,pillar,task,dataset,year,region,scale,note,cite_keys
+Mainstream,Sense,Semantic Segmentation,Cityscapes,2016,Germany,"5,000 I",Urban; 19 eval classes; 50 cities,Cordts2016
+Mainstream,Sense,Semantic Segmentation,BDD100K,2018,USA,100k clips,Multi-task; weather and night subsets,Yu2020
+Mainstream,Sense,Semantic Segmentation,Mapillary,2017,Global,"25,000 I",124 classes; crowd-sourced worldwide,Neuhold2017
+Mainstream,Sense,Semantic Segmentation,ApolloScape,2018,China,"140,000 I",Baidu; Chinese urban; 25 classes,Huang2018Apollo
+Mainstream,Sense,Semantic Segmentation,IDD,2019,India,"10,004 I",Semi-structured; 34-class hierarchy,Varma2019
+Mainstream,Sense,Semantic Segmentation,ACDC,2021,Switzerland,"4,006 I",Paired adverse/clear; fog/night/rain/snow,Sakaridis2021
+Mainstream,Sense,Semantic Segmentation,A2D2,2020,Germany,"41,277 I",Audi; highway + urban; 38 classes,Geyer2020
+Mainstream,Sense,3D Object Detection & LiDAR Segmentation,KITTI,2012,Germany,"15,000 F",Foundational 3D benchmark; HDL-64E,Geiger2012
+Mainstream,Sense,3D Object Detection & LiDAR Segmentation,SemanticKITTI,2019,Germany,"43,551 F",Point-wise labels; 28 classes,Behley2019
+Mainstream,Sense,3D Object Detection & LiDAR Segmentation,nuScenes,2019,USA + SG,"1,000 scenes",6-cam + 5-LiDAR + 5-RADAR; multi-city,Caesar2020
+Mainstream,Sense,3D Object Detection & LiDAR Segmentation,Waymo Open,2019,USA,"390,000 F",Largest public benchmark; 12M 3D boxes,Sun2020
+Mainstream,Sense,3D Object Detection & LiDAR Segmentation,ONCE,2021,China,1M F,Largest LiDAR frame count,Mao2021ONCE
+Mainstream,Sense,Localisation & SLAM,RobotCar,2017,UK,>100 runs,Same 10 km route across all seasons,Maddern2017RobotCar
+Mainstream,Sense,Localisation & SLAM,KAIST Urban,2019,S. Korea,Multi-sensor,Urban SLAM; Seoul,Jeong2019KAISTUrban
+Mainstream,Sense,Adverse Conditions & Domain Shift,CADCD,2020,Canada,"7,000 F",3D annotation under Canadian snow,Pitropov2021CADCD
+Mainstream,Sense,Adverse Conditions & Domain Shift,DAWN,2020,MENA+EU,"1,029 I","Fog, sandstorm, rain, snow",Kenk2020DAWN
+Mainstream,Sense,Adverse Conditions & Domain Shift,SYNTHIA,2016,Synthetic,"9,400 I",Virtual city; domain adaptation,Ros2016
+Mainstream,Sense,Adverse Conditions & Domain Shift,SHIFT,2022,Synthetic,2.5M F,Continuous + discrete domain shift,Sun2022SHIFT
+Mainstream,Sense,Cooperative Perception (V2X),DAIR-V2X,2022,China,"71,254 F",First real-world V2I dataset,Xu2022DAIRV2X
+Mainstream,Sense,Cooperative Perception (V2X),OPV2V,2022,Synthetic,"11,464 S",V2V cooperative; CARLA-based,Xu2022OPV2V
+Mainstream,Sense,Off-road & Unstructured,RUGD,2019,USA,"7,545 I",Trail and vegetation terrain,Wigness2019RUGD
+Mainstream,Sense,Off-road & Unstructured,RELLIS,2021,USA,"13,556 I+F",Military campus; camera + LiDAR,Jiang2021RELLIS
+Mainstream,Plan,Motion Forecasting & Trajectory Prediction,Argoverse,2019,USA,"333,000 S",HD map; 5-second prediction horizon,Chang2019Argoverse
+Mainstream,Plan,Motion Forecasting & Trajectory Prediction,Argoverse 2,2023,USA,"250,000 S",6 cities; full sensor logs,Wilson2023Argoverse2
+Mainstream,Plan,Motion Forecasting & Trajectory Prediction,WOMD,2021,USA,103k S,128 agents/scene; 20-second scenarios,Ettinger2021WOMD
+Mainstream,Plan,Motion Forecasting & Trajectory Prediction,Lyft Level 5,2020,USA,170k S,1000+ hours; L5Kit trajectory framework,Houston2021Lyft
+Mainstream,Act,Closed-loop Control & Planning,nuPlan,2023,Multi,"1,500 H",First closed-loop planning benchmark,Caesar2021nuPlan
+Specialised and emerging,Sense,Night & Low-Visibility,Dark Zurich,2019,Switzerland,"8,779 I",Day-night paired images; nighttime seg,Sakaridis2019
+Specialised and emerging,Sense,Night & Low-Visibility,NightOwls,2018,Multi (EU),"279,000 F",Night-time pedestrian detection; 50 fps,Neumann2019NightOwls
+Specialised and emerging,Sense,OOD & Anomaly Detection,WildDash,2018,Global,"4,256 I",Adversarial OOD edge-case evaluation,Zendel2018
+Specialised and emerging,Sense,OOD & Anomaly Detection,Fishyscapes,2019,Switzerland,"1,000+ I",Unknown-class anomaly segmentation,Blum2019
+Specialised and emerging,Sense,Event Camera,DSEC,2021,Switzerland,---,Stereo event cam + LiDAR; night and motion blur,Gehrig2021DSEC
+Specialised and emerging,Sense,4D Imaging Radar,VoD,2022,Netherlands,"8,693 F",4D radar + LiDAR + cam; Delft campus,Palffy2022VoD
+Specialised and emerging,Sense,4D Imaging Radar,K-Radar,2022,S. Korea,"35,000 F",4D radar; rain/snow/fog conditions,Paek2022KRadar
+Specialised and emerging,Sense,4D Imaging Radar,RADIal,2022,France,"25,000 F",HD radar + LiDAR + cam; Valeo Research,Rebut2022RADIal
+Specialised and emerging,Sense,Infrastructure & Fleet Cameras,CityFlow,2019,USA,11.96 H,Multi-camera intersections; MOT + ReID,Tang2019CityFlow
+Specialised and emerging,Sense,Infrastructure & Fleet Cameras,D^2-City,2019,China,700k+ F,1000 fleet taxis; secondary Chinese cities,Che2019D2City
+Specialised and emerging,Sense,Infrastructure & Fleet Cameras,Rope3D,2022,China,"50,000 F",Roadside cam + LiDAR; infrastructure-side,Ye2021Rope3D
+Specialised and emerging,Sense,Thermal & Multispectral,KAIST-Multi,2015,S. Korea,"95,000 F",RGB + thermal (LWIR); day/night pedestrian,Hwang2015KAIST
+Specialised and emerging,Sense,Global South & Unstructured,SAAD,2022,S. Africa,"<5,000 I",Only known Sub-Saharan African AD dataset,
+Specialised and emerging,Sense,Global South & Unstructured,DriveIndia,2025,India,"66,986 I",Largest Indian AD dataset; fog/rain/night,
+Specialised and emerging,Sense,Global South & Unstructured,IDD-3D,2023,India,"12,000 F",Unstructured Indian 3D LiDAR segmentation,
+Specialised and emerging,Sense,Historical & Specialised Tasks,CamVid,2009,UK,701 I,Pioneer semantic video segmentation,Brostow2009
+Specialised and emerging,Sense,Historical & Specialised Tasks,SceneFlow,2016,Synthetic,39k pairs,"Optical flow, depth, and scene flow",Mayer2016SceneFlow
+Specialised and emerging,Sense,Historical & Specialised Tasks,H3D,2019,USA,160 scenes,Full-surround 3D; crowded urban; Honda,Patil2019H3D
+Specialised and emerging,Sense,Historical & Specialised Tasks,PandaSet,2021,USA,"16,000 F",Spinning vs. solid-state LiDAR comparison,Xiao2021PandaSet
+Specialised and emerging,Plan,Drone-based & Interactive Trajectories,INTERACTION,2019,Multi,100k S,Drones; unprotected turns/merges,Zhan2019Interaction
+Specialised and emerging,Plan,Drone-based & Interactive Trajectories,highD,2018,Germany,110k veh.,Drone-based naturalistic highway tracks,Krajewski2018highD
+Specialised and emerging,Plan,Mixed-Traffic Trajectory Prediction,IDD-PeD,2024,India,---,Pedestrian trajectory; mixed-traffic,IDDPeD2024
+Specialised and emerging,Act,Closed-loop Simulation Benchmarks,CARLA / MetaDrive,---,Synthetic,---,End-to-end continuous control evaluation,
+Specialised and emerging,Act,End-to-End Driving Logs & Benchmarks,comma2k19,2018,USA,33 H,Openpilot GNSS/INS/vision raw logs,Santana2018comma2k19
+Specialised and emerging,Act,End-to-End Driving Logs & Benchmarks,NAVSIM,2024,Multi,100k+ S,Non-reactive end-to-end benchmark,Treml2024NAVSIM

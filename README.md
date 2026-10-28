@@ -44,6 +44,18 @@ Vector PDFs of every plot are in [`figures/`](figures).
 
 [`PAPERS.md`](PAPERS.md) lists all 462 unique references (278 general, 36 Sense, 76 Plan, 72 Act), sorted by year, with venue and DOI or URL where the BibTeX entry has one. The source BibTeX files are in [`data/`](data).
 
+
+## Tables
+
+The survey's tables, as browsable pages and CSV files. All are generated from the manuscript and the BibTeX files by `scripts/make_tables.py` and `scripts/make_paper_list.py`.
+
+| Table | Rows | Page | Data |
+|---|---|---|---|
+| Papers cited, grouped by Sense, Plan and Act | 462 | [`PAPERS.md`](PAPERS.md) | [`docs/papers.json`](docs/papers.json) |
+| Benchmark datasets by pillar and task | 52 | [`tables/datasets.md`](tables/datasets.md) | [`data/datasets.csv`](data/datasets.csv) |
+| Taxonomy of 57 surveys, 19 research categories | 19 | [`tables/surveys.md`](tables/surveys.md) | [`data/survey_references.csv`](data/survey_references.csv) |
+| Algorithmic maturity by on-road entropy | 38 | [`tables/maturity.md`](tables/maturity.md) | [`data/maturity.csv`](data/maturity.csv) |
+
 ## Reproduce
 
 ```bash
