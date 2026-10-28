@@ -7,9 +7,9 @@
 <meta name="description" content="Reference list, plots and findings for a survey of global readiness for Level-5 vehicular autonomy.">
 <style>
 :root{--bg:#fafcff;--surface:#fff;--ink:#1c2634;--muted:#606c7c;--line:#c8d2e0;--blue:#2668b2;--deep:#153a68;--tint:#ebf3fc;
---amber:#c47c00;--amberbg:#fef5e2;--amberink:#8a5400;--plan:#3e8e7e;--act:#7a5c9e;--gen:#8a94a3}
-@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1620;--surface:#17212e;--ink:#e6ecf4;--muted:#9aa7b8;--line:#2b3a4d;--blue:#6fa8ee;--deep:#a9ccf6;--tint:#14263a;--amber:#e3a33a;--amberbg:#2b2210;--amberink:#f0c273;--plan:#5fb9a7;--act:#a98fd0;--gen:#8793a3}}
-:root[data-theme=dark]{--bg:#0f1620;--surface:#17212e;--ink:#e6ecf4;--muted:#9aa7b8;--line:#2b3a4d;--blue:#6fa8ee;--deep:#a9ccf6;--tint:#14263a;--amber:#e3a33a;--amberbg:#2b2210;--amberink:#f0c273;--plan:#5fb9a7;--act:#a98fd0;--gen:#8793a3}
+--amber:#c47c00;--amberbg:#fef5e2;--amberink:#8a5400;--plan:#3e8e7e;--act:#7a5c9e;--gen:#8a94a3;--m1:#153a68;--m2:#2668b2;--m3:#a0c1e6;--m4:#f3c36b}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1620;--surface:#17212e;--ink:#e6ecf4;--muted:#9aa7b8;--line:#2b3a4d;--blue:#6fa8ee;--deep:#a9ccf6;--tint:#14263a;--amber:#e3a33a;--amberbg:#2b2210;--amberink:#f0c273;--plan:#5fb9a7;--act:#a98fd0;--gen:#8793a3;--m1:#8ab8f0;--m2:#4f8fd8;--m3:#2d4f7c;--m4:#b9822a}}
+:root[data-theme=dark]{--bg:#0f1620;--surface:#17212e;--ink:#e6ecf4;--muted:#9aa7b8;--line:#2b3a4d;--blue:#6fa8ee;--deep:#a9ccf6;--tint:#14263a;--amber:#e3a33a;--amberbg:#2b2210;--amberink:#f0c273;--plan:#5fb9a7;--act:#a98fd0;--gen:#8793a3;--m1:#8ab8f0;--m2:#4f8fd8;--m3:#2d4f7c;--m4:#b9822a}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif}
 a{color:var(--blue)}
@@ -45,6 +45,12 @@ td.y{white-space:nowrap;color:var(--muted)}
 .fig h3{margin:0 0 4px;font-size:16px;color:var(--deep)}
 .fig p{margin:0 0 10px;color:var(--muted)}
 .legend span{margin-right:14px;font-size:13px}
+.swarm{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 10px}
+.colh{font-weight:700;margin-bottom:6px}
+.dots{display:flex;flex-wrap:wrap;gap:6px}
+.fam{width:26px;height:26px;border-radius:50%;border:1px solid var(--line);transition:background .6s;cursor:default}
+.fig svg{width:100%;height:auto;display:block}
+.mc:hover{fill-opacity:1}
 footer{max-width:1120px;margin:auto;padding:0 20px 40px;color:var(--muted);font-size:13px}
 @media (max-width:640px){th:nth-child(4),td:nth-child(4){display:none}}
 </style>
@@ -52,19 +58,20 @@ footer{max-width:1120px;margin:auto;padding:0 20px 40px;color:var(--muted);font-
 <body>
 <header>
 <h1>Building towards Level-5 Vehicular Autonomy</h1>
-<p class="sub">A survey of global readiness in data, technology and society. This page holds the survey's reference list and the plots built from its data. Blue marks other people's published work, amber marks our own analysis.</p>
+<p class="sub">A survey of global readiness in data, technology and society. This page holds the survey's reference list and three interactive views built from its data. Blue marks other people's published work, amber marks our own analysis.</p>
 <div class="finding">India carries about 420 million road users a day on about 15 annotated frames per 1,000 road-km. Japan and Brazil have no public annotated benchmark of record.</div>
 </header>
 <nav><div class="in" role="tablist">
 <button class="tab" role="tab" data-v="table" aria-selected="true">Table</button>
 <button class="tab" role="tab" data-v="cards" aria-selected="false">Cards</button>
 <button class="tab" role="tab" data-v="timeline" aria-selected="false">Timeline</button>
-<button class="tab" role="tab" data-v="figures" aria-selected="false">Plots</button>
+<button class="tab" role="tab" data-v="explore" aria-selected="false">Explore</button>
 <span class="spacer"></span>
 <button class="chip" id="theme" aria-pressed="false">Dark</button>
 </div></nav>
 <main id="main"></main>
-<footer>Reference list generated from the survey's BibTeX files; plots computed by scripts in the repository. <a href="https://github.com/Utathyaworks/Autonomous_Driving_Survey">Source on GitHub</a>.</footer>
+<footer>Reference list generated from the survey's BibTeX files; interactive views computed from the repository's CSV files by scripts/make_site_data.py. <a href="https://github.com/Utathyaworks/Autonomous_Driving_Survey">Source on GitHub</a>.</footer>
+<script src="explore.js"></script>
 <script>
 const COL={General:"var(--gen)",Sense:"var(--blue)",Plan:"var(--plan)",Act:"var(--act)"};
 const GROUPS=["Sense","Plan","Act","General"];
@@ -100,15 +107,8 @@ keys.forEach((k,i)=>{let y=H-B;const x=L+i*bw+2;for(const g of GROUPS){const n=(
 if(i%4===0||k==="<1990")s+=`<text x="${x+bw/2-2}" y="${H-10}" text-anchor="middle" font-size="10.5" fill="var(--muted)">${k}</text>`});
 return `<div class="bars"><div class="legend">${GROUPS.map(g=>`<span><span class="dot" style="background:${COL[g]}"></span>${g}</span>`).join("")}</div><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Papers per year, stacked by group">${s}</svg>
 <p class="hint">Click a bar to list that year's papers.</p></div>`}
-const FIGS=[["data_inversion","Demand against annotation","Daily road users against annotated frames per 1,000 road-km. India: 420 M users, 15 frames; Japan and Brazil: none."],
-["maturity_heatmap","The maturity cliff","38 method families across Sense, Plan and Act, graded M1 to M4 at on-road entropy E1 to E5. The share fielded or proven falls from 57-58% at E3 to 0-25% at E4."],
-["sae_ladder","SAE levels","Who performs control, monitoring and fallback at each level, with commercial status."],
-["data_landscape","Benchmark landscape","38 datasets by release year and annotated size; South Asian and African datasets ringed."],
-["data_roads","Road networks","Total roads, expressways, paved share and urban speed for the ten largest economies."],
-["quant_results","Headline results","Camera against LiDAR detection, one tracker under three metrics, Waymo crash-rate reductions with intervals."]];
-function figures(){return FIGS.map(([f,t,d])=>`<div class="fig"><h3>${t}</h3><p>${d}</p><a href="figures/${f}.png"><img src="figures/${f}.png" alt="${t}" loading="lazy"></a></div>`).join("")}
 function draw(keepFocus){const m=$("#main");
-if(view==="figures"){m.innerHTML=figures();return}
+if(view==="explore"){stopPlay();loadExplore(()=>{m.innerHTML=exploreHTML();bindExplore()});return}
 const body=(view==="table"?table():view==="cards"?cards():timeline());m.innerHTML=toolbar()+body;$("#cnt").textContent=CNT;bind();
 document.querySelectorAll("th[data-s]").forEach(h=>h.onclick=()=>{const k=h.dataset.s;sort={k,d:sort.k===k?-sort.d:1};draw()});
 document.querySelectorAll("rect[data-y]").forEach(r=>r.onclick=()=>{const k=r.dataset.y;if(k==="<1990")return;yr=+k;view="table";setTabs();draw()});
@@ -117,7 +117,7 @@ function setTabs(){document.querySelectorAll(".tab").forEach(t=>t.setAttribute("
 document.querySelectorAll(".tab").forEach(t=>t.onclick=()=>{view=t.dataset.v;setTabs();draw()});
 $("#theme").onclick=()=>{const d=document.documentElement,dark=d.dataset.theme==="dark"||(!d.dataset.theme&&matchMedia("(prefers-color-scheme:dark)").matches);d.dataset.theme=dark?"light":"dark";$("#theme").textContent=dark?"Dark":"Light";store("theme",d.dataset.theme)};
 const th=load("theme");if(th){document.documentElement.dataset.theme=th;$("#theme").textContent=th==="dark"?"Light":"Dark"}
-fetch("papers.json").then(r=>r.json()).then(d=>{P=d.map(p=>({...p,g:NAME[p.g]||p.g}));const v=load("view");if(["table","cards","timeline","figures"].includes(v))view=v;setTabs();draw()}).catch(()=>{$("#main").textContent="Could not load papers.json."});
+fetch("papers.json").then(r=>r.json()).then(d=>{P=d.map(p=>({...p,g:NAME[p.g]||p.g}));const v=load("view");if(["table","cards","timeline","explore"].includes(v))view=v;setTabs();draw()}).catch(()=>{$("#main").textContent="Could not load papers.json."});
 </script>
 </body>
 </html>

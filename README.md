@@ -72,3 +72,14 @@ Colour code, as in the paper: blue marks other people's published work, amber ma
 ## Status
 
 Review draft. The manuscript source is not part of this repository.
+
+
+## Interactive site
+
+The [site](https://utathyaworks.github.io/Autonomous_Driving_Survey/) does not repeat the paper's figures. Its Explore tab has three views built only for the web, computed from `data/` by `scripts/make_site_data.py`:
+
+1. **Slide the road from motorway to lane-free.** Move the entropy level E1 to E5, or press Play, and watch the 38 method families change grade.
+2. **Annotation per person, not per kilometre.** A cartogram of the ten largest economies, sized by daily road users, coloured by annotated frames per road-km or per million users. The two lenses rank the economies differently.
+3. **Where each kind of benchmark was collected.** Region by task family; click a cell to list its datasets.
+
+The Table, Cards and Timeline tabs search and filter the 462 references.
